@@ -11,12 +11,11 @@
 # select wireless card for monitor mod
 read -p 'select your monitor  ' myMonitor
 
-
 airmon-ng start $myMonitor  # active  monitor mod
 
 # echo the availible options 
-echo '[1] wifi locat'
-echo '[2] wifi attack'
+echo '[1] wireless locat'
+echo '[2] wireless attack'
 echo '[3] crack handshake '
 echo '[4] exit  '
 ##
@@ -30,7 +29,7 @@ case $optionSelect in
         # this case for locat wirles
 	airmon-ng check kill # kill prouceses
 	sleep 2
-	airodump-ng "${myMonitor}mon" &  # finde  wirles
+	airodump-ng "${myMonitor}mon" # finde  wirles
 	;;
 
   2)
